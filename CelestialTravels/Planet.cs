@@ -4,11 +4,13 @@ using System.Text;
 
 namespace CelestialTravels
 {
-    public class Planets 
+    public class Planet
     {
         public string Name { get; set; }
+        public string Location { get; set; }
+        public bool AccessKey { get; set; }
 
-        public List<Instances> Instances { get; set; }
+
     }
 
     

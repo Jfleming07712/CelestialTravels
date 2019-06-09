@@ -10,8 +10,14 @@ namespace CelestialTravels
         public string Gender { get; set; }
         public string Race { get; set; }
         public string Job { get; set; }
-        public string Credits { get; set; }
-        public string Experience { get; set; }
+        public int Credits { get; set; }
+        public int Experience { get; set; }
+        public int Level { get; set; }
+        public int WeaponSkill { get; set; }
+        public int ArmorSkill { get; set; }
+        public int NavigationSkill { get; set; }
+        public int TimeSkill { get; set; }
+
 
     }
 

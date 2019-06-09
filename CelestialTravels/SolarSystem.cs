@@ -4,10 +4,12 @@ using System.Text;
 
 namespace CelestialTravels
 {
-    public class SolarSystems
+    public class SolarSystem
     {
         public string Name { get; set; }
-        public List<Planets> Planets {get; set;}
+        public int Location { get; set; }
+        public bool AccessKey { get; set; }
+
     }
 
   
