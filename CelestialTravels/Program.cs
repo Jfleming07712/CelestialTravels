@@ -19,7 +19,7 @@ namespace CelestialTravels
             var stats = new PlayerStats();
             player.Name = Console.ReadLine();
             Console.WriteLine($"Hello { player.Name} \n");
-            PlayerStats.PrintPlayerStats(player);
+            stats.PrintPlayerStats(player);
 
             var genderValid = false;
             var raceValid = false;
@@ -120,7 +120,7 @@ namespace CelestialTravels
                         Console.WriteLine($"{player.Name} the Navi >*^,^,^~~~");
                     }
                     Console.WriteLine("NavigationSkill +5\n");
-                    PlayerStats.PrintPlayerStats(player);
+                    stats.PrintPlayerStats(player);
                     Console.WriteLine("Return any key to continue...");
                     Console.ReadLine();
                     jobValid = true;
@@ -132,7 +132,7 @@ namespace CelestialTravels
                     Console.WriteLine($"\n{ player.Name} is a {player.Gender} {player.Race} {player.Job}\n");
                     player.WeaponSkill += 5;
                     Console.WriteLine("WeaponSkill +5\n");
-                    PlayerStats.PrintPlayerStats(player);
+                    stats.PrintPlayerStats(player);
                     Console.WriteLine("Return any key to continue...");
                     Console.ReadLine();
                     jobValid = true;
@@ -145,7 +145,7 @@ namespace CelestialTravels
                     Console.WriteLine($"\n{ player.Name} is a {player.Gender} {player.Race} {player.Job}\n");
                     player.TimeSkill += 5;
                     Console.WriteLine("TimeSkill +5\n");
-                    PlayerStats.PrintPlayerStats(player);
+                    stats.PrintPlayerStats(player);
                     Console.WriteLine("Return any key to continue...");
                     Console.ReadLine();
                     jobValid = true;

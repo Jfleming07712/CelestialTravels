@@ -6,7 +6,7 @@ namespace CelestialTravels
 {
     public class PlayerStats
     {
-        public static void PrintPlayerStats(PlayerCharacter player)
+        public void PrintPlayerStats(PlayerCharacter player)
         {
             Console.WriteLine($"NAME:{player.Name}");
             Console.WriteLine($"GENDER:{player.Gender}");
@@ -18,7 +18,7 @@ namespace CelestialTravels
             Console.WriteLine($"WEAPON SKILL:{player.WeaponSkill}");
             Console.WriteLine($"ARMOR SKILL:{player.ArmorSkill}");
             Console.WriteLine($"NAVIGATION SKILL:{player.NavigationSkill}");
-            Console.WriteLine($"TIME SKILL:{player.TimeSkill}");
+            Console.WriteLine($"TIME SKILL:......{player.TimeSkill}");
         }
 
     }
