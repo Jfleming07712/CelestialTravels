@@ -187,6 +187,7 @@ namespace CelestialTravels
             Console.WriteLine("Return any key to continue...");
             Console.ReadLine();
 
+
             player.Credits = player.Credits + 100;
             Console.WriteLine($"{player.Name} has {player.Credits} Credits\n");
             Console.WriteLine("Return any key to continue...");
