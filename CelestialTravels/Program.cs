@@ -184,9 +184,8 @@ namespace CelestialTravels
             Console.WriteLine($"PILOT:  {player.Name} you will need 2 more things on your journey.  Here take my Blaster to " +
                 $"protect yourself and smite your enemies.  You will also need some Credits if you are going to venture " +
                 $"across the stars\n");
-            Console.WriteLine("Return any key to continue...");
-            Console.ReadLine();
 
+            // I need to add the blaster to inventory here
 
             player.Credits = player.Credits + 100;
             Console.WriteLine($"{player.Name} has {player.Credits} Credits\n");

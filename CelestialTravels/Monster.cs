@@ -10,6 +10,8 @@ namespace CelestialTravels
         public int CurrentHitPoints { get; set; }
         public int TotalHitPoints { get; set; }
         public int Attack { get; set; }
+        public int Level { get; set; }
 
     }
+
 }
