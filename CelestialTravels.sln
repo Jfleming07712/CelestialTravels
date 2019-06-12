@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelestialTravels", "CelestialTravels\CelestialTravels.csproj", "{5BD562A5-175C-4382-849A-E93178D1D794}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CelestialTravels", "CelestialTravels\CelestialTravels.csproj", "{5BD562A5-175C-4382-849A-E93178D1D794}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{071416AD-BF20-448C-9852-D7E8A1DE8C7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{69C9B282-9EF1-412D-9A9E-1C6EC3815C3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{5BD562A5-175C-4382-849A-E93178D1D794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BD562A5-175C-4382-849A-E93178D1D794}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BD562A5-175C-4382-849A-E93178D1D794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69C9B282-9EF1-412D-9A9E-1C6EC3815C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69C9B282-9EF1-412D-9A9E-1C6EC3815C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69C9B282-9EF1-412D-9A9E-1C6EC3815C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69C9B282-9EF1-412D-9A9E-1C6EC3815C3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{69C9B282-9EF1-412D-9A9E-1C6EC3815C3A} = {071416AD-BF20-448C-9852-D7E8A1DE8C7E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B547A93D-5283-4F7D-A624-096C917FB074}

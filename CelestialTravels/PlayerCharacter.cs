@@ -6,6 +6,12 @@ namespace CelestialTravels
 {
     public class PlayerCharacter
     {
+        public PlayerCharacter()
+        {
+
+        }
+
+
         public string Name { get; set; }
         public string Gender { get; set; }
         public string Race { get; set; }
