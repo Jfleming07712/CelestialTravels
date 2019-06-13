@@ -21,7 +21,7 @@ namespace CelestialTravels
         public int TimeSkill { get; set; }
         public string CurrentWeapon { get; set; }
 
-
+        public Inventory Inventory { get; set; } = new Inventory();
     }
 
     public static class Options

@@ -96,11 +96,8 @@ namespace CelestialTravels
             }
             while (raceValid == false);
 
-
-
             do
             {
-
                 foreach (string job in Options.Jobs)
                 {
                     Console.WriteLine(job);
@@ -166,7 +163,7 @@ namespace CelestialTravels
 
             Console.WriteLine($"SPACE KING BRETT: Young { player.Name} I have heard the tale of your strife at the hand of " +
                 "the Space Sharks.  I weep for your misfortune.  I would avenge your family for you, but our vast " +
-                "library, The Great Database, does not have the knowledge needed to combate the cruel and ruthless " +
+                "library, The Great Database, does not have the knowledge needed to combat the cruel and ruthless " +
                 "Space Sharks.  I task you to become a noble Space Knight of Knowledge, and seek the data we need " +
                 "to combat this oppressive enemy.  To help you on your travels, I shall grant you 3 things...First " +
                 "I will give you a DiamondDrive in which you will collect as much Data as you can find.  Second I will give " +
@@ -199,11 +196,6 @@ namespace CelestialTravels
             Console.WriteLine("MR. PIDDLES: Meow meow meow, meow meow meow meow!\n");
             Console.WriteLine("Return any key to continue...");
             Console.ReadLine();
-
-
-
         }
-
-        
     }
 }
