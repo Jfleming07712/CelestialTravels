@@ -12,6 +12,7 @@ namespace CelestialTravels
     {
         public static void Main(string[] args)
         {
+            var fight = new Fight();
             var playerAttackCalculator = new PlayerAttackCalculator();
             var roller = new Roller();
             var player = new PlayerCharacter();
@@ -34,15 +35,21 @@ namespace CelestialTravels
 
             player.CurrentWeaponDamage = 10;
             player.WeaponSkill = 2;
+            whiteMonster01.Attack = 10;
 
 
             // This is the Quality Assurance section for temporary testing
+
+            //Console.WriteLine("monster health" + whiteMonster01.CurrentHitPoints);
+            //Console.WriteLine("monster attack" + whiteMonster01.Attack);
+
+            //Console.ReadLine();
 
 
             stats.PrintPlayerStats(player);
             //Console.WriteLine(roller.GetRandomNumber(1, 100));
             //Console.WriteLine(whiteMonster01.CurrentHitPoints);
-
+            fight.DoFight(player, whiteMonster01, stats);
 
 
 
