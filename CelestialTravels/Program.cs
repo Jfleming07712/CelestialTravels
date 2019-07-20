@@ -35,6 +35,9 @@ namespace CelestialTravels
 
             player.CurrentWeaponDamage = 10;
             player.WeaponSkill = 2;
+            player.Name = "Player01";
+            player.CurrentHitPoints = 100;
+            player.TotalHitPoints = 100;
             whiteMonster01.Attack = 10;
 
 
@@ -42,15 +45,11 @@ namespace CelestialTravels
 
             //Console.WriteLine("monster health" + whiteMonster01.CurrentHitPoints);
             //Console.WriteLine("monster attack" + whiteMonster01.Attack);
-
             //Console.ReadLine();
-
-
-            stats.PrintPlayerStats(player);
+            //stats.PrintPlayerStats(player);
             //Console.WriteLine(roller.GetRandomNumber(1, 100));
             //Console.WriteLine(whiteMonster01.CurrentHitPoints);
-            fight.DoFight(player, whiteMonster01, stats);
-
+            //fight.DoFight(player, whiteMonster01, stats);
 
 
 
@@ -63,9 +62,20 @@ namespace CelestialTravels
             playerCreater.CreatePlayer(player, stats);
 
 
+
             // The story begins
             story.TheBegining01(player);
             
         }
     }
 }
+
+
+
+
+//    Method calls for parts of the program that are built
+
+//fight.DoFight(player, whiteMonster01, stats);
+//playerCreater.CreatePlayer(player, stats);
+//story.TheBegining01(player);
+//stats.PrintPlayerStats(player);

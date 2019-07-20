@@ -10,63 +10,73 @@ namespace CelestialTravels
         {
             var roller = new Roller();
             var monster = whiteMonster;
-            Character attacker;
-            Character defender;
-
-            Console.WriteLine("player hp  " + player. CurrentHitPoints);
-            Console.ReadLine();
+            var fightOver = false;
+            Character winner = player;
+            Character looser = player;
 
 
             PlayerAttackCalculator.CalculatePlayerAttack(player);
 
 
-            PreBattleRoll(roller, player, monster, out attacker, out defender);
+            
+
+            PreBattleRoll(roller, player, monster, out Character attacker, out Character defender);
 
 
 
 
+            while (fightOver == false)
+            {
+                // Rolling
+                attacker.Roll = roller.GetRandomNumber(1, 12);
+
+                // Calculate Damage
+                var damage = (attacker.Roll / 10) * attacker.Attack;
+
+                // Apply damage to defender
+                defender.CurrentHitPoints = defender.CurrentHitPoints - damage;
 
 
-            Console.WriteLine("monster HP  " + monster.CurrentHitPoints);
-            stats.PrintPlayerStats(player);
-            Console.ReadLine();
+                // End fight and declare winner or switch roles 
+                if (defender.CurrentHitPoints <= 0)
+                {
+                    // End the fight
+                    fightOver = true;
+                    winner = attacker;
+                    looser = defender;
+                }
+                else
+                {
+                    // Switch roles
+                    var temporaryCharacter = attacker;
+                    attacker = defender;
+                    defender = temporaryCharacter;
+                }
+
+            }
+
+            // Post battle stuff.
+            if (winner.Name == player.Name)
+            {
+                player = (PlayerCharacter)winner;
+                player.Experience += looser.TotalHitPoints;
+                player.CurrentHitPoints = player.TotalHitPoints;
 
 
-            attacker.Roll = roller.GetRandomNumber(1, 12);
-
-            Console.WriteLine("attackers roll  " + attacker.Roll);
-            Console.ReadLine();
-
-            var damage = (attacker.Roll / 10) * attacker.Attack;
-
-
-            Console.WriteLine("damage delt  " + damage);
-            Console.ReadLine();
-
-            defender.CurrentHitPoints -= damage;
-
-            Console.WriteLine("damage  " + damage);
-            Console.WriteLine("HP    " + defender.CurrentHitPoints);
-            Console.ReadLine();
+                Console.WriteLine("YOU ARE A WINNER");
+                Console.WriteLine("You received " + looser.TotalHitPoints + " Experience Points.");
+                stats.PrintPlayerStats(player);
+            }
+            else
+            {
+                player = (PlayerCharacter)looser;
 
 
 
-
+                Console.WriteLine("YOU ARE A LOOSER!");
+            }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -99,7 +109,7 @@ namespace CelestialTravels
                 defender = player;
                 Console.WriteLine("Monster wins the toss");
                 Console.WriteLine("player health   " + player.CurrentHitPoints);
-                Console.WriteLine("Player health as defender health   " + defender.CurrentHitPoints);
+                Console.WriteLine("Monster health as attacker health   " + attacker.CurrentHitPoints);
 
             }
         }
