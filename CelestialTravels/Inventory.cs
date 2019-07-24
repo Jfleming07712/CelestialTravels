@@ -6,33 +6,16 @@ namespace CelestialTravels
 {
     public class Inventory
     {
-        List<Weapon> WeaponList = new List<Weapon>();
+        public List<Weapon> WeaponList = new List<Weapon>();
 
-        public void CreateWeaponBlaster()
+        public void WeaponEnumerator()
         {
-            var blaster = new Weapon();
-            blaster.Name = "Blaster";
-            blaster.Attack = 5;
-            blaster.Equiped = false;
-            WeaponList.Add(blaster);
+            foreach (Weapon weapon in WeaponList)
+            {
+                Console.WriteLine((WeaponList.IndexOf(weapon) + ")  " + (weapon.Type) + " " + (weapon.Name) + " Atk =" + (weapon.Attack) + "  Durability =" + (weapon.Durability)));
+            }
         }
 
-        public void CreateWeaponDoubleBlaster()
-        {
-            var doubleBlaster = new Weapon();
-            doubleBlaster.Name = "Double Blaster";
-            doubleBlaster.Attack = 10;
-            doubleBlaster.Equiped = false;
-            WeaponList.Add(doubleBlaster);
-        }
-
-        public void CreateWeaponPhotonSword()
-        {
-            var photonSword = new Weapon();
-            photonSword.Name = "PhotonSword";
-            photonSword.Attack = 15;
-            photonSword.Equiped = false;
-            WeaponList.Add(photonSword);
-        }
+       
     }
 }

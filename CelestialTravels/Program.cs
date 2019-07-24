@@ -20,6 +20,8 @@ namespace CelestialTravels
             var playerCreater = new PlayerCreator();
             var story = new Story();
             var monsterMaker = new MonsterMaker();
+            var weaponMaker = new WeaponMaker();
+            var playerInventory = new Inventory();
             var whiteMonster01 = monsterMaker.CreateWhiteMonster(player);
             var whiteMonster02 = monsterMaker.CreateWhiteMonster(player);
             var whiteMonster03 = monsterMaker.CreateWhiteMonster(player);
@@ -33,8 +35,7 @@ namespace CelestialTravels
 
 
 
-            player.CurrentWeaponDamage = 10;
-            player.WeaponSkill = 2;
+            player.WeaponSkill = 1;
             player.Name = "Player01";
             player.CurrentHitPoints = 100;
             player.TotalHitPoints = 100;
@@ -50,6 +51,11 @@ namespace CelestialTravels
             //Console.WriteLine(roller.GetRandomNumber(1, 100));
             //Console.WriteLine(whiteMonster01.CurrentHitPoints);
             //fight.DoFight(player, whiteMonster01, stats);
+            //weaponMaker.CreateWeaponBlaster(playerInventory);
+            //weaponMaker.CreateWeaponDoubleBlaster(playerInventory);
+            //weaponMaker.CreateWeaponPhotonSword(playerInventory);
+            //fight.DoFight(player, whiteMonster01, stats, playerInventory);
+            //playerInventory.WeaponEnumerator();
 
 
 
@@ -64,8 +70,12 @@ namespace CelestialTravels
 
 
             // The story begins
-            story.TheBegining01(player);
-            
+            story.TheBegining01(player, playerInventory, weaponMaker);
+
+
+            Console.WriteLine("Time for your first battle! \n");
+            fight.DoFight(player, whiteMonster01, stats, playerInventory);
+
         }
     }
 }

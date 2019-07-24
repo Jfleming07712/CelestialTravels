@@ -6,7 +6,8 @@ namespace CelestialTravels
 {
     public class Fight
     {
-        public void DoFight(PlayerCharacter player, Monster whiteMonster, PlayerStats stats)
+
+        public void DoFight(PlayerCharacter player, Monster whiteMonster, PlayerStats stats, Inventory playerInventory)
         {
             var roller = new Roller();
             var monster = whiteMonster;
@@ -15,27 +16,29 @@ namespace CelestialTravels
             Character looser = player;
 
 
-            PlayerAttackCalculator.CalculatePlayerAttack(player);
-
-
             
 
             PreBattleRoll(roller, player, monster, out Character attacker, out Character defender);
 
 
-
-
             while (fightOver == false)
             {
+                // Select Weapon
+                ChooseWeaponToAttackWith(attacker, player, playerInventory);
+
+
                 // Rolling
                 attacker.Roll = roller.GetRandomNumber(1, 12);
+                Console.WriteLine("attacker's roll " + attacker.Roll + "\n");
 
                 // Calculate Damage
                 var damage = (attacker.Roll / 10) * attacker.Attack;
+                Console.WriteLine("Damage " + (damage) + "\n");
 
                 // Apply damage to defender
                 defender.CurrentHitPoints = defender.CurrentHitPoints - damage;
-
+                Console.WriteLine("Defender's HP  " + defender.CurrentHitPoints + "\n");
+                Console.ReadLine();
 
                 // End fight and declare winner or switch roles 
                 if (defender.CurrentHitPoints <= 0)
@@ -51,6 +54,8 @@ namespace CelestialTravels
                     var temporaryCharacter = attacker;
                     attacker = defender;
                     defender = temporaryCharacter;
+
+                    Console.WriteLine("the Attacker is now " + attacker.Name + "\n");
                 }
 
             }
@@ -83,13 +88,7 @@ namespace CelestialTravels
 
 
 
-
-
-
-
-
-
-        private static void PreBattleRoll(Roller roller, PlayerCharacter player, Monster monster, out Character attacker, out Character defender)
+        public static void PreBattleRoll(Roller roller, PlayerCharacter player, Monster monster, out Character attacker, out Character defender)
         {
             player.Roll = roller.GetRandomNumber(1, 100);
             monster.Roll = roller.GetRandomNumber(1, 100);
@@ -98,7 +97,7 @@ namespace CelestialTravels
             {
                 attacker = player;
                 defender = monster;
-                Console.WriteLine("Player wins the toss");
+                Console.WriteLine("Player wins the toss and is the Attacker");
                 Console.WriteLine("player health   " + player.CurrentHitPoints);
                 Console.WriteLine("monster health   " + defender.CurrentHitPoints);
 
@@ -107,11 +106,34 @@ namespace CelestialTravels
             {
                 attacker = monster;
                 defender = player;
-                Console.WriteLine("Monster wins the toss");
+                Console.WriteLine("Monster wins the toss and is the Attacker");
                 Console.WriteLine("player health   " + player.CurrentHitPoints);
-                Console.WriteLine("Monster health as attacker health   " + attacker.CurrentHitPoints);
+                Console.WriteLine("Monster health   " + attacker.CurrentHitPoints);
+                Console.WriteLine("");
 
             }
+        }
+
+        public void ChooseWeaponToAttackWith(Character attacker, Character player, Inventory playerInventory)
+        {
+            if (attacker == player)
+            {
+                Console.WriteLine("Choose which weapon to attack with (enter the number) ");
+                playerInventory.WeaponEnumerator();
+                var TempChosenWeaponToAttackWith = Console.ReadLine();
+
+                // Need to check if the input is an int or else it throws exeption when I type wrong.
+
+
+                int ChosenWeaponToAttackWith = Convert.ToInt32(TempChosenWeaponToAttackWith);
+
+                player.CurrentWeaponDamage = playerInventory.WeaponList[ChosenWeaponToAttackWith].Attack;
+                
+                PlayerAttackCalculator.CalculatePlayerAttack((PlayerCharacter) player);
+
+                playerInventory.WeaponList[ChosenWeaponToAttackWith].Durability -= 1;
+            }
+            
         }
     }
 }
