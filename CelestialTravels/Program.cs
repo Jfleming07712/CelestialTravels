@@ -56,7 +56,6 @@ namespace CelestialTravels
             //weaponMaker.CreateWeaponPhotonSword(playerInventory);
             //fight.DoFight(player, whiteMonster01, stats, playerInventory);
             //playerInventory.WeaponEnumerator();
-            story.TheBegining01(player, playerInventory, weaponMaker);
 
 
 
