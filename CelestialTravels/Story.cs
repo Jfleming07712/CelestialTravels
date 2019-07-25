@@ -6,7 +6,7 @@ namespace CelestialTravels
 {
     public class Story
     {
-        public void TheBegining01(PlayerCharacter player, Inventory playerInventory, WeaponMaker weaponMaker)
+        public void TheBegining01(PlayerCharacter player, Inventory playerInventory, WeaponMaker weaponMaker, PlayerMap playerMap, Map alphaMap)
         {
 
 
@@ -43,14 +43,19 @@ namespace CelestialTravels
             Console.WriteLine("Return to continue...");
             Console.ReadLine();
 
-            Console.WriteLine($"PILOT:  {player.Name} you will need 2 more things on your journey.  Here take my Blaster to " +
-                $"protect yourself and smite your enemies.  You will also need some Credits if you are going to venture " +
+            Console.WriteLine($"PILOT:  {player.Name} you will need 3 more things on your journey.  Here take my Blaster to " +
+                $"protect yourself and smite your enemies.  You will also need some Credits and a Map if you are going to venture " +
                 $"across the stars\n");
 
-            Console.WriteLine(@"Hey thanks for the Cash and Guns man!");
+            Console.WriteLine(@"Hey thanks for the Cash, Map and Gun man!");
 
 
+            // Weapon Made/Received
             weaponMaker.CreateWeaponBlaster(playerInventory);
+
+            // Map Received
+            playerMap.PlayerMaps.Add(alphaMap);
+
 
             if (player.Credits < 100)
             {
@@ -58,6 +63,7 @@ namespace CelestialTravels
             }
             
             Console.WriteLine($"{player.Name} has {player.Credits} Credits\n");
+            Console.WriteLine($"{player.Name} has received the map for Alpha solar system");
             Console.WriteLine("Return to continue...");
             Console.ReadLine();
 
