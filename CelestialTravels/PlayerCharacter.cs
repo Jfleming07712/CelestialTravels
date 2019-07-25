@@ -7,6 +7,7 @@ namespace CelestialTravels
     public class PlayerCharacter : Character
     {
         public Inventory Inventory { get; set; } = new Inventory();
+        public Place Location { get; set; }
     }
 
     public static class Options

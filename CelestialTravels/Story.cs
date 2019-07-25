@@ -51,7 +51,12 @@ namespace CelestialTravels
 
 
             weaponMaker.CreateWeaponBlaster(playerInventory);
-            player.Credits = player.Credits + 100;
+
+            if (player.Credits < 100)
+            {
+                player.Credits += 100;
+            }
+            
             Console.WriteLine($"{player.Name} has {player.Credits} Credits\n");
             Console.WriteLine("Return to continue...");
             Console.ReadLine();

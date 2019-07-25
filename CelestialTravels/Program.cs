@@ -15,13 +15,38 @@ namespace CelestialTravels
             var fight = new Fight();
             var playerAttackCalculator = new PlayerAttackCalculator();
             var roller = new Roller();
+
             var player = new PlayerCharacter();
+            player.Name = "Player01";
+            player.CurrentHitPoints = 100;
+            player.TotalHitPoints = 100;
+            player.WeaponSkill = 1;
+
             var stats = new PlayerStats();
             var playerCreater = new PlayerCreator();
             var story = new Story();
             var monsterMaker = new MonsterMaker();
             var weaponMaker = new WeaponMaker();
             var playerInventory = new Inventory();
+            var diamondDrive = new DiamondDrive();
+            var travel = new Travel();
+
+            var brettopia = new Planet();
+            brettopia.Name = "Brettopia";
+            brettopia.Location = "Alpha";
+
+            var alpha = new SolarSystem();
+            alpha.Name = "Alpha";
+            alpha.Location = "Universe";
+
+            var jumpGateAlpha = new JumpGate();
+            jumpGateAlpha.Name = "Jump Gate Alpha";
+            jumpGateAlpha.Location = "Alpha";
+
+            var spacePortBrettopia = new SpacePort();
+            spacePortBrettopia.Name = "Space Port Brettopia";
+            spacePortBrettopia.Location = "Brettopia";
+
             var whiteMonster01 = monsterMaker.CreateWhiteMonster(player);
             var whiteMonster02 = monsterMaker.CreateWhiteMonster(player);
             var whiteMonster03 = monsterMaker.CreateWhiteMonster(player);
@@ -56,7 +81,7 @@ namespace CelestialTravels
             //weaponMaker.CreateWeaponPhotonSword(playerInventory);
             //fight.DoFight(player, whiteMonster01, stats, playerInventory);
             //playerInventory.WeaponEnumerator();
-
+            spacePortBrettopia.SpacePortOptions(player, brettopia, travel, alpha, spacePortBrettopia);
 
 
 

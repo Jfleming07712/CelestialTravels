@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CelestialTravels
 {
-    class DiamondDrive
+    public class DiamondDrive
     {
     }
 }

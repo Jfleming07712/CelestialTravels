@@ -6,6 +6,10 @@ namespace CelestialTravels
 {
     public class Inventory
     {
+
+
+
+
         public List<Weapon> WeaponList = new List<Weapon>();
 
         public void WeaponEnumerator()

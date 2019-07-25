@@ -4,10 +4,8 @@ using System.Text;
 
 namespace CelestialTravels
 {
-    public class Planet : Place
+    public class JumpGate : Place
     {
-        public SpacePort SpacePort01 { get; set; }
 
     }
-
-}    
+}

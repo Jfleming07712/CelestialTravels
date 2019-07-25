@@ -4,11 +4,9 @@ using System.Text;
 
 namespace CelestialTravels
 {
-    public class Instances
+    public class Instance : Place
     {
-        public string Name { get; set; }
-        public string Location { get; set; }
-        public bool AccessKey { get; set; }
+        
         public string Type { get; set; }
     }
 }
