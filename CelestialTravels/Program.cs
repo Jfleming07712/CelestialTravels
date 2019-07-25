@@ -119,6 +119,7 @@ namespace CelestialTravels
             var travel = new Travel();
             var universeMap = new UniverseMap();
             var playerMap = new PlayerMap();
+
             var alphaMap = new Map();
             alphaMap.Name = "Alpha";
             alphaMap.SolarSystem.Add(alpha);
@@ -129,6 +130,17 @@ namespace CelestialTravels
             alphaMap.SpacePorts.Add(spacePortBrettopia);
             alphaMap.SpacePorts.Add(spacePortKathaven);
             alphaMap.SpacePorts.Add(spacePortLibraria);
+
+            var betaMap = new Map();
+            betaMap.Name = "Beta";
+            betaMap.SolarSystem.Add(beta);
+            betaMap.JumpGates.Add(jumpGateBeta);
+
+            var gammaMap = new Map();
+            gammaMap.Name = "Gamma";
+            gammaMap.SolarSystem.Add(gamma);
+            gammaMap.JumpGates.Add(jumpGateGamma);
+
 
 
 
