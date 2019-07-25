@@ -9,7 +9,7 @@ namespace CelestialTravels
 
         public List<Weapon> WeaponList = new List<Weapon>();
 
-        public void WeaponEnumerator()
+        public void EunumerateWeapons()
         {
             foreach (Weapon weapon in WeaponList)
             {

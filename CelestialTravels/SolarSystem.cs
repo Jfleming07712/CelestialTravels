@@ -6,8 +6,8 @@ namespace CelestialTravels
 {
     public class SolarSystem : Place
     {
-        
-        public List<Planet> Planets { get; set; }
+
+        public List<Planet> Planets { get; set; } = new List<Planet>();
 
 
 

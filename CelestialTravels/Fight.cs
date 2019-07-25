@@ -119,7 +119,7 @@ namespace CelestialTravels
             if (attacker == player)
             {
                 Console.WriteLine("Choose which weapon to attack with (enter the number) ");
-                playerInventory.WeaponEnumerator();
+                playerInventory.EunumerateWeapons();
                 var TempChosenWeaponToAttackWith = Console.ReadLine();
 
                 // Need to check if the input is an int or else it throws exeption when I type wrong.

@@ -122,10 +122,10 @@ namespace CelestialTravels
 
                     // Alpha Maps
             var alphaMap = new Map();
-            alphaMap.Name = "Alpha";
-            alphaMap.SolarSystem.Add(alpha);
-            alphaMap.JumpGates.Add(jumpGateAlpha);
-            alphaMap.Planets.Add(brettopia);
+            alphaMap.Name = "Alpha";  // this is the null exception right here
+            alphaMap.SolarSystem.Add(alpha); // this probably, name should be fine.  Did you new up a list before adding a solarsystem?
+            alphaMap.JumpGates.Add(jumpGateAlpha);  // shit that is probably it.  Forgot I had to new up those damn lists
+            alphaMap.Planets.Add(brettopia); // as a matter of practice I generally just new up a list whenever I make the property.  There is very rarely ever a good reason to have a null list.  A collection is generally empty or not.  I wish they built it into the language actually.
             alphaMap.Planets.Add(kathaven);
             alphaMap.Planets.Add(libraria);
             alphaMap.SpacePorts.Add(spacePortBrettopia);
@@ -184,7 +184,9 @@ namespace CelestialTravels
             //weaponMaker.CreateWeaponPhotonSword(playerInventory);
             //fight.DoFight(player, whiteMonster01, stats, playerInventory);
             //playerInventory.WeaponEnumerator();
-            spacePortBrettopia.SpacePortOptions(player, brettopia, travel, alpha, spacePortBrettopia);
+
+            //universeMap.EnumerateJumpGates();
+            //spacePortBrettopia.SpacePortOptions(player, brettopia, travel, alpha, spacePortBrettopia);
 
 
 
@@ -197,7 +199,7 @@ namespace CelestialTravels
 
 
             // The story begins
-            story.TheBegining01(player, playerInventory, weaponMaker);
+            story.TheBegining01(player, playerInventory, weaponMaker, playerMap, alphaMap);
 
 
             Console.WriteLine("Time for your first battle! \n");

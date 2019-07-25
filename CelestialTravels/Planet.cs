@@ -6,7 +6,7 @@ namespace CelestialTravels
 {
     public class Planet : Place
     {
-        public SpacePort SpacePort01 { get; set; }
+        public SpacePort SpacePort01 { get; set; } 
 
     }
 
