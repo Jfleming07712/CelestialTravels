@@ -37,12 +37,6 @@ namespace CelestialTravels
             var story = new Story();
             
             
-            // Travel/Map Creation
-
-            var travel = new Travel();
-            var universeMap = new UniverseMap();
-            var playerMap = new PlayerMap();
-            var alphaMap = new Map();
 
 
             // Factory Creation
@@ -112,6 +106,30 @@ namespace CelestialTravels
             var spacePortLibraria = new SpacePort();
             spacePortBrettopia.Name = "Space Port Libraria";
             spacePortBrettopia.Location = "Brettopia";
+
+
+
+            // Instance Creation
+
+
+
+
+            // Travel/Map Creation
+
+            var travel = new Travel();
+            var universeMap = new UniverseMap();
+            var playerMap = new PlayerMap();
+            var alphaMap = new Map();
+            alphaMap.Name = "Alpha";
+            alphaMap.SolarSystem.Add(alpha);
+            alphaMap.JumpGates.Add(jumpGateAlpha);
+            alphaMap.Planets.Add(brettopia);
+            alphaMap.Planets.Add(kathaven);
+            alphaMap.Planets.Add(libraria);
+            alphaMap.SpacePorts.Add(spacePortBrettopia);
+            alphaMap.SpacePorts.Add(spacePortKathaven);
+            alphaMap.SpacePorts.Add(spacePortLibraria);
+
 
 
 

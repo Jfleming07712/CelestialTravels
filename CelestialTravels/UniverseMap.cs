@@ -6,6 +6,6 @@ namespace CelestialTravels
 {
     public class UniverseMap
     {
-
+        public List<Map> UniverseMaps { get; set; }
     }
 }
