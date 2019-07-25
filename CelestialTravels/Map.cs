@@ -4,11 +4,14 @@ using System.Text;
 
 namespace CelestialTravels
 {
-    class Map
+    public class Map
     {
-        public class PlayerMap
-        {
+        public string Name { get; set; }
+        public List<SolarSystem> SolarSystem { get; set; }
+        public List<JumpGate> JumpGates { get; set; }
+        public List<Planet> Planets { get; set; }
+        public List<SpacePort> SpacePorts { get; set; }
+        public List<Instance> Instances { get; set; }
 
-        }
     }
 }

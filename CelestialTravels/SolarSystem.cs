@@ -11,6 +11,8 @@ namespace CelestialTravels
         public Planet Planet03 { get; set; }
 
 
+
+
     }
 
   
