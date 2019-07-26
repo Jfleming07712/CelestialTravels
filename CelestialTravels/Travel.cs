@@ -6,10 +6,12 @@ namespace CelestialTravels
 {
     public class Travel
     {
-        public void TravelToSolarSystem(PlayerCharacter player, SolarSystem solarSystem)
+        public void TravelToJumpGate(PlayerCharacter player, SolarSystem solarSystem, JumpGate jumpGate, Planet planet, Travel travel, SpacePort spaceport)
         {
             player.Location = solarSystem;
             Console.WriteLine("you are now in " + player.Location);
+            jumpGate.JumpGateOptions(player, planet, travel, solarSystem, spaceport, jumpGate);
+            
         }
 
         public void TravelToPlanet(PlayerCharacter player, Planet planet)

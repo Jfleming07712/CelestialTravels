@@ -19,8 +19,8 @@ namespace CelestialTravels
             switch (playerSelection)
             {
                 case "0":
-                    // TravelToSolarSystem method here
-                    travel.TravelToSolarSystem(player, solarSystem);
+                    // TravelToJumpGate method here
+                    travel.TravelToJumpGate(player, solarSystem);
                     Console.WriteLine("Travel to JumpGate (not really)");
                     break;
 
@@ -30,10 +30,6 @@ namespace CelestialTravels
                     Console.WriteLine("Game Loaded (not really)");
                     break;
 
-                case "2":
-                    // quit game method here
-                    Console.WriteLine("Game Quit (not really)");
-                    break;
 
 
             }

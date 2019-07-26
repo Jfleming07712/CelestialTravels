@@ -63,8 +63,8 @@ namespace CelestialTravels
                     Console.WriteLine("Instance03 Loaded (not really)");
                     break;
                 case "8":
-                    // TravelToSolarSystem method here
-                    travel.TravelToSolarSystem(player, solarSystem);
+                    // TravelToJumpGate method here
+                    travel.TravelToJumpGate(player, solarSystem);
                     Console.WriteLine("Travel to JumpGate (not really)");
                     
                     break;

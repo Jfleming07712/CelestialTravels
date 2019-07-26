@@ -48,13 +48,18 @@ namespace CelestialTravels
 
             // Solar System Creation
 
-            var alpha = new SolarSystem();
-            alpha.Name = "Alpha";
-            alpha.Location = "Universe";
+            var alpha = new SolarSystem("Alpha", "Universe");
+            ////alpha.Name = "Alpha";
+            ////alpha.Location = "Universe";
 
-            var beta = new SolarSystem();
-            alpha.Name = "Beta";
-            alpha.Location = "Universe";
+            // not a constructor but initialization syntax
+            var beta = new SolarSystem
+            {
+                Name = "Beta",
+                Location = "Universe",
+            };
+            ////alpha.Name = "Beta";
+            ////alpha.Location = "Universe";
 
             var gamma = new SolarSystem();
             alpha.Name = "Gamma";
