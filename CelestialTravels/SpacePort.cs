@@ -24,7 +24,10 @@ namespace CelestialTravels
             Console.WriteLine("5) Go to instance01 (Not yet implimented)");
             Console.WriteLine("6) Go to instance02 (Not yet implimented)");
             Console.WriteLine("7) Go to instance03 (Not yet implimented)");
-            Console.WriteLine("8) Travel to JumpGate in solar system (Not yet implimented)");
+            Console.WriteLine("8) Travel to SpacePort in solar system (Not yet implimented)");
+            Console.WriteLine("9) Travel to JumpGate in solar system (Not yet implimented)");
+            Console.WriteLine();
+            Console.WriteLine("Please anter your selection");
 
             playerSelection = Console.ReadLine();
 
@@ -64,12 +67,14 @@ namespace CelestialTravels
                     break;
                 case "8":
                     // TravelToJumpGate method here
+                    travel.TravelToSpacePort(player, spacePort, travel, solarSystem, planet, jumpGate);
+                    Console.WriteLine("Travel to JumpGate (not really)");
+                    break;
+                case "9":
+                    // TravelToJumpGate method here
                     travel.TravelToJumpGate(player, solarSystem, jumpGate, planet, travel, spacePort);
                     Console.WriteLine("Travel to JumpGate (not really)");
-                    
                     break;
-
-
             }
 
         }
