@@ -18,10 +18,10 @@ namespace CelestialTravels
         {
         }
 
-        public void TravelToSpacePort(PlayerCharacter player, SpacePort spacePort, Travel travel, SolarSystem solarSystem, Planet planet)
+        public void TravelToSpacePort(PlayerCharacter player, SpacePort spacePort, Travel travel, SolarSystem solarSystem, Planet planet, JumpGate jumpGate)
         {
             player.Location = spacePort;
-            spacePort.SpacePortOptions(player, planet, travel, solarSystem, spacePort);
+            spacePort.SpacePortOptions(player, planet, travel, solarSystem, spacePort, jumpGate);
             Console.WriteLine("You are now in " + player.Location.Name);
         }
 

@@ -20,13 +20,13 @@ namespace CelestialTravels
             {
                 case "0":
                     // TravelToJumpGate method here
-                    travel.TravelToJumpGate(player, solarSystem);
+                    travel.TravelToJumpGate(player, solarSystem, jumpGate, planet, travel, spacePort);
                     Console.WriteLine("Travel to JumpGate (not really)");
                     break;
 
                 case "1":
                     // TravelToSpacePort method here
-                    travel.TravelToSpacePort(player, spacePort, travel, solarSystem, planet);
+                    travel.TravelToSpacePort(player, spacePort, travel, solarSystem, planet, jumpGate);
                     Console.WriteLine("Game Loaded (not really)");
                     break;
 

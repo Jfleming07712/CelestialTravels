@@ -204,7 +204,7 @@ namespace CelestialTravels
 
 
             // The story begins
-            story.TheBegining01(player, playerInventory, weaponMaker, playerMap, alphaMap);
+            story.TheBegining01(player, playerInventory, weaponMaker, playerMap, alphaMap, travel, spacePortBrettopia, alpha, brettopia, jumpGateAlpha);
 
 
             Console.WriteLine("Time for your first battle! \n");

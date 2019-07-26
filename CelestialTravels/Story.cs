@@ -6,7 +6,7 @@ namespace CelestialTravels
 {
     public class Story
     {
-        public void TheBegining01(PlayerCharacter player, Inventory playerInventory, WeaponMaker weaponMaker, PlayerMap playerMap, Map alphaMap)
+        public void TheBegining01(PlayerCharacter player, Inventory playerInventory, WeaponMaker weaponMaker, PlayerMap playerMap, Map alphaMap, Travel travel, SpacePort spacePort, SolarSystem solarSystem, Planet planet, JumpGate jumpGate)
         {
 
 
@@ -74,6 +74,9 @@ namespace CelestialTravels
             Console.WriteLine("MR. PIDDLES: Meow meow meow, meow meow meow meow!\n");
             Console.WriteLine("Return to continue...");
             Console.ReadLine();
+
+            travel.TravelToSpacePort(player, spacePort, travel, solarSystem, planet, jumpGate);
+
         }
     }
 }

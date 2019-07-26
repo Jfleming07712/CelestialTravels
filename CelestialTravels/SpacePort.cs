@@ -11,7 +11,7 @@ namespace CelestialTravels
         public Instance Instance03 { get; set; }
 
 
-        public void SpacePortOptions(PlayerCharacter player, Planet planet, Travel travel, SolarSystem solarSystem, SpacePort spacePort)
+        public void SpacePortOptions(PlayerCharacter player, Planet planet, Travel travel, SolarSystem solarSystem, SpacePort spacePort, JumpGate jumpGate)
         {
             string playerSelection;
 
@@ -64,7 +64,7 @@ namespace CelestialTravels
                     break;
                 case "8":
                     // TravelToJumpGate method here
-                    travel.TravelToJumpGate(player, solarSystem);
+                    travel.TravelToJumpGate(player, solarSystem, jumpGate, planet, travel, spacePort);
                     Console.WriteLine("Travel to JumpGate (not really)");
                     
                     break;
