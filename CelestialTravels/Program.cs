@@ -216,22 +216,8 @@ namespace CelestialTravels
 
         }
     }
-
-
-
-    public interface IOption
-    {
-        int Id { get; }
-        string Name { get; }
-    }
 }
 
 
 
 
-//    Method calls for parts of the program that are built
-
-//fight.DoFight(player, whiteMonster01, stats);
-//playerCreater.CreatePlayer(player, stats);
-//story.TheBegining01(player);
-//stats.PrintPlayerStats(player);

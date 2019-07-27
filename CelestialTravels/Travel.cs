@@ -9,7 +9,7 @@ namespace CelestialTravels
         public void TravelToJumpGate(PlayerCharacter player, SolarSystem solarSystem, JumpGate jumpGate, Planet planet, Travel travel, SpacePort spaceport)
         {
             player.Location = solarSystem;
-            Console.WriteLine("you are now in " + player.Location);
+            Console.WriteLine("you are now in " + player.Location.Name);
             jumpGate.JumpGateOptions(player, planet, travel, solarSystem, spaceport, jumpGate);
             
         }
