@@ -137,7 +137,9 @@ namespace CelestialTravels
             alphaMap.SpacePorts.Add(spacePortKathaven);
             alphaMap.SpacePorts.Add(spacePortLibraria);
 
-                    // Beta Maps
+            
+
+            // Beta Maps
             var betaMap = new Map();
             betaMap.Name = "Beta";
             betaMap.SolarSystem.Add(beta);
@@ -154,8 +156,10 @@ namespace CelestialTravels
             universeMap.UniverseMaps.Add(betaMap);
             universeMap.UniverseMaps.Add(gammaMap);
 
+            var selector = new OptionSelector();
+            var selectedMapId = selector.GetOption<Map>(universeMap.UniverseMaps);
 
-
+            
 
 
 
@@ -190,7 +194,7 @@ namespace CelestialTravels
             //fight.DoFight(player, whiteMonster01, stats, playerInventory);
             //playerInventory.WeaponEnumerator();
 
-            //universeMap.EnumerateJumpGates();
+            universeMap.EnumerateJumpGates();
             //spacePortBrettopia.SpacePortOptions(player, brettopia, travel, alpha, spacePortBrettopia);
 
 
@@ -211,6 +215,14 @@ namespace CelestialTravels
             fight.DoFight(player, whiteMonster01, stats, playerInventory);
 
         }
+    }
+
+
+
+    public interface IOption
+    {
+        int Id { get; }
+        string Name { get; }
     }
 }
 

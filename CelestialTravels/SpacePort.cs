@@ -6,9 +6,6 @@ namespace CelestialTravels
 {
     public class SpacePort : Place
     {
-        public Instance Instance01 { get; set; }
-        public Instance Instance02 { get; set; }
-        public Instance Instance03 { get; set; }
 
 
         public void SpacePortOptions(PlayerCharacter player, Planet planet, Travel travel, SolarSystem solarSystem, SpacePort spacePort, JumpGate jumpGate)
@@ -27,7 +24,7 @@ namespace CelestialTravels
             Console.WriteLine("8) Travel to SpacePort in solar system (Not yet implimented)");
             Console.WriteLine("9) Travel to JumpGate in solar system (Not yet implimented)");
             Console.WriteLine();
-            Console.WriteLine("Please anter your selection");
+            Console.WriteLine("Please enter your selection");
 
             playerSelection = Console.ReadLine();
 
@@ -66,7 +63,8 @@ namespace CelestialTravels
                     Console.WriteLine("Instance03 Loaded (not really)");
                     break;
                 case "8":
-                    // TravelToJumpGate method here
+                    // TravelToSpacePorts method here (this line will be the caller)
+                    
                     travel.TravelToSpacePort(player, spacePort, travel, solarSystem, planet, jumpGate);
                     Console.WriteLine("Travel to JumpGate (not really)");
                     break;

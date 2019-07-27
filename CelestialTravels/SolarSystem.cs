@@ -18,6 +18,6 @@ namespace CelestialTravels
             this.Location = location;
         }
 
-        public List<Planet> Planets { get; set; } = new List<Planet>();
+        
     }
 }
