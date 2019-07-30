@@ -14,12 +14,10 @@ namespace CelestialTravels
             
         }
 
-        public void TravelToPlanet(PlayerCharacter player, Planet planet)
+        public void TravelToSpacePort(PlayerCharacter player, SpacePort spacePort, Travel travel, SolarSystem solarSystem, Planet planet, JumpGate jumpGate, OptionSelector optionSelector)
         {
-        }
-
-        public void TravelToSpacePort(PlayerCharacter player, SpacePort spacePort, Travel travel, SolarSystem solarSystem, Planet planet, JumpGate jumpGate)
-        {
+            // I think this is where I need to use the interface for options.
+            //optionSelector.GetOption<SpacePort>();
             player.Location = spacePort;
             spacePort.SpacePortOptions(player, planet, travel, solarSystem, spacePort, jumpGate);
             Console.WriteLine("You are now in " + player.Location.Name);

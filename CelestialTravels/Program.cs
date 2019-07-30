@@ -124,6 +124,7 @@ namespace CelestialTravels
             var travel = new Travel();
             var universeMap = new UniverseMap();
             var playerMap = new PlayerMap();
+            var optionSelector = new OptionSelector();
 
                     // Alpha Maps
             var alphaMap = new Map();
